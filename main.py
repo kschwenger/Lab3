@@ -39,6 +39,6 @@ class Joystick:
 
 theJoystick = Joystick(0x48)
 if __name__ == "__main__":
-  print ("%s, %s" % (theJoystick.getX(0),theJoystick.getY(1)))
+  print ("%s, %s" % (theJoystick.getX(),theJoystick.getY()))
 
   #getting error : TypeError: read() takes 2 positional arguments but 3 were given
