@@ -36,4 +36,5 @@ class Joystick:
 
 theJoystick = Joystick(0x48)
 if __name__ == "__main__":
-  print ("%s, %s" % (theJoystick.getX(),theJoystick.getY()))
+  while True:
+    print ("%s, %s" % (theJoystick.getX(),theJoystick.getY()))
