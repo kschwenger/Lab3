@@ -29,16 +29,16 @@ class Joystick:
     self.joystick = PCF8591(address)
   
   def getX(self):
-    return (self.joystick.read(0))
+    return str(self.joystick.read(0))
 
   def getY(self):
-    return (self.joystick.read(1))
+    return str(self.joystick.read(1))
 
 theJoystick = Joystick(0x48)
 if __name__ == "__main__":
   try:
     while True:
-      print ("{:=d}, {:=d}".format(theJoystick.getX(),theJoystick.getY()))
+      print ("{:>s}, {:>s}".format(theJoystick.getX(),theJoystick.getY()))
       sleep(0.1)
   except KeyboardInterrupt: # if user hits ctrl-C
     print('\nExiting')
