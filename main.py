@@ -38,6 +38,4 @@ theJoystick = Joystick(chn)
 if __name__ == "__main__":
     setup(0x48)
     while True:
-        print ('AIN0 = ', read(0))
-        print ('AIN1 = ', read(1))
-print (theJoystick.getX(chn) ", " theJoystick.getY(chn))
+      print (theJoystick.getX(chn) ", " theJoystick.getY(chn))
