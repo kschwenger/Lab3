@@ -34,7 +34,9 @@ class Joystick:
   def getY(self,chn):
     return str(self.joystick.read(self,chn))
 
-joyX = Joystick(0)
+joyX = Joystick(0) #check these arguments
 joyY = Joystick(1)
 if __name__ == "__main__":
   print ("%s, %s" % (joyX.getX(0),joyY.getY(1)))
+
+  #getting error : TypeError: read() takes 2 positional arguments but 3 were given
