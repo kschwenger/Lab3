@@ -28,17 +28,12 @@ class Joystick:
   def __init__(self,address):
     self.joystick = PCF8591(address)
   
-  def getX(self):
+  def getX(self,chn):
     return str(self.joystick.read(self,chn))
 
-  def getY(self):
+  def getY(self,chn):
     return str(self.joystick.read(self,chn))
-
-#joyX = Joystick(0) #check these arguments
-#joyY = Joystick(1)
 
 theJoystick = Joystick(0x48)
 if __name__ == "__main__":
-  print ("%s, %s" % (theJoystick.getX(0),theJoystick.getY(1)))
-
-  #getting error : TypeError: read() takes 2 positional arguments but 3 were given
+print ("%s, %s" % (theJoystick.getX(0),theJoystick.getY(1)))
