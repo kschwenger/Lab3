@@ -30,12 +30,12 @@ class Joystick:
   def getX(self,chn):
     return str(self.joystick.read(self,chn))
 
-  
   def getY(self,chn):
     return str(self.joystick.read(self,chn))
 
-theJoystick = Joystick(chn)
+joyX = Joystick(2)
+joyY = Joystick(1)
 if __name__ == "__main__":
     setup(0x48)
     while True:
-      print ("%s, %s" % (theJoystick.getX(chn),theJoystick.getY(chn)))
+      print ("%s, %s" % (joyX.getX(chn),joyY.getY(chn)))
