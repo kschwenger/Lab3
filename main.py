@@ -11,7 +11,7 @@ class PCF8591:
 
   def read(self,chn): #channel
       try:
-          self.bus.write_byte(self.address, 0x48 | chn)  # 01000000
+          self.bus.write_byte(self.address, 0x40 | chn)  # 01000000
           self.bus.read_byte(self.address) # dummy read to start conversion
       except Exception as e:
           print ("Address: %s \n%s" % (self.address,e))
@@ -34,8 +34,10 @@ class Joystick:
   def getY(self,chn):
     return str(self.joystick.read(self,chn))
 
-joyX = Joystick(0) #check these arguments
-joyY = Joystick(1)
+#joyX = Joystick(0) #check these arguments
+#joyY = Joystick(1)
+
+theJoystick = Joystick(0x48)
 if __name__ == "__main__":
   print ("%s, %s" % (joyX.getX(0),joyY.getY(1)))
 
