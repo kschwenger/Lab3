@@ -35,13 +35,12 @@ class Joystick:
     return (self.joystick.read(1))
 
 theJoystick = Joystick(0x48)
-if __name__ == "__main__":
-  try:
-    while True:
-      #print ("{:3>d}, {:3>d}".format(theJoystick.getX(),theJoystick.getY()))
-      print('%3.f,  %3.f' % (theJoystick.getX(),theJoystick.getY()))
-      sleep(0.1)
-  except KeyboardInterrupt: # if user hits ctrl-C
-    print('\nExiting')
-  except Exception as e: # catch all other errors
-    print('\ne') 
+#if __name__ == "__main__":
+try:
+  while True:
+    print('%3.f,  %3.f' % (theJoystick.getX(),theJoystick.getY()))
+    sleep(0.1)
+except KeyboardInterrupt: # if user hits ctrl-C
+  print('\nExiting')
+except Exception as e: # catch all other errors
+  print('\ne') 
