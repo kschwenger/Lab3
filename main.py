@@ -29,10 +29,10 @@ class Joystick:
     self.joystick = PCF8591(address)
   
   def getX(self):
-    return str(self.joystick.read(self,chn))
+    return str(self.joystick.read(self,0))
 
   def getY(self):
-    return str(self.joystick.read(self,chn))
+    return str(self.joystick.read(self,1))
 
 #joyX = Joystick(0) #check these arguments
 #joyY = Joystick(1)
