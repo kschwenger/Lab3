@@ -28,11 +28,11 @@ class Joystick:
   def __init__(self,address):
     self.joystick = PCF8591(address)
   
-  def getX(self,chn):
-    return str(self.joystick.read(self,chn))
+  def getX(self):
+    return str(self.joystick.read(self,0))
 
-  def getY(self,chn):
-    return str(self.joystick.read(self,chn))
+  def getY(self):
+    return str(self.joystick.read(self,1))
 
 theJoystick = Joystick(0x48)
 if __name__ == "__main__":
