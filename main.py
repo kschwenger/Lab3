@@ -37,4 +37,4 @@ class Joystick:
 joyX = Joystick(0)
 joyY = Joystick(1)
 if __name__ == "__main__":
-  print ("%s, %s" % (joyX.getX(0),joyY.getY(1)))
+  print ("%s, %s" % (joyX.getX(),joyY.getY(1)))
