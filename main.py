@@ -36,5 +36,10 @@ class Joystick:
 
 theJoystick = Joystick(0x48)
 if __name__ == "__main__":
-  while True:
-    print ("%s, %s" % (theJoystick.getX(),theJoystick.getY()))
+  try:
+    while True:
+      print ("%s, %s" % (theJoystick.getX(),theJoystick.getY()))
+  except KeyboardInterrupt: # if user hits ctrl-C
+    print('\nExiting')
+  except Exception as e: # catch all other errors
+    print('\ne') 
