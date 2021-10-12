@@ -1,7 +1,7 @@
 #   To check address: sudo i2cdetect -y 1
 
 import smbus
-import time
+from time import sleep
 
 class PCF8591:
 
@@ -39,6 +39,7 @@ if __name__ == "__main__":
   try:
     while True:
       print ("%s, %s" % (theJoystick.getX(),theJoystick.getY()))
+      sleep(0.1)
   except KeyboardInterrupt: # if user hits ctrl-C
     print('\nExiting')
   except Exception as e: # catch all other errors
