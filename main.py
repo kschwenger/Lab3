@@ -38,7 +38,7 @@ theJoystick = Joystick(0x48)
 if __name__ == "__main__":
   try:
     while True:
-      print ("{ >:s}, { >:s}".format(theJoystick.getX(),theJoystick.getY()))
+      print ("{:>s}, {:>s}".format(theJoystick.getX(),theJoystick.getY()))
       sleep(0.1)
   except KeyboardInterrupt: # if user hits ctrl-C
     print('\nExiting')
