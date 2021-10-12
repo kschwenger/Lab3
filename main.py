@@ -38,4 +38,4 @@ theJoystick = Joystick(chn)
 if __name__ == "__main__":
     setup(0x48)
     while True:
-      print (theJoystick.getX(chn) ", " theJoystick.getY(chn))
+      print ("%s, %s" % (theJoystick.getX(chn),theJoystick.getY(chn)))
