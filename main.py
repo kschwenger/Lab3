@@ -32,7 +32,7 @@ class Joystick:
     return str(self.joystick.read(0))
 
   def getY(self):
-    return str(self.joystick.read(self,1))
+    return str(self.joystick.read(1))
 
 theJoystick = Joystick(0x48)
 if __name__ == "__main__":
